@@ -1,0 +1,444 @@
+//单元bar
+.bar_cell{
+  height: 1.3rem;
+  width: 100%;
+  line-height: 1.3rem;
+  background:#fff;
+  position:relative;
+  text-align:left;
+  padding-left:0.4rem;
+
+  &::before{
+    content: ' ';
+    position: absolute;
+    pointer-events: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 0.4rem;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    border-bottom: 0.02667rem solid #ebedf0;
+
+  }
+  .bar_title{
+    font-size: 0.37rem;
+    color:#666;
+
+  }
+  .bar_select{
+    padding-left:1.5rem;
+    i{
+      margin-right:0.5rem;
+      color:#e6e6e6;
+      em{
+       
+        border-radius:50%;
+        width: 0.27rem;
+        height: 0.27rem;
+        margin-right:0.3rem;
+        display: inline-block;
+        background:#e6e6e6;
+
+        
+      }
+      &.active{
+        color:#666;
+        em{
+          border:1px solid #38b5f0;
+          background:#fff;
+          border-radius:50%;
+          width:0.24rem;
+          height:0.24rem;
+          margin-right:0.3rem;
+          display: inline-block;
+        }
+        
+       
+  
+      }
+  
+    }
+   
+  }
+}
+
+
+.info_btn {
+  width: 100%;
+  height: 1.39rem;
+  background-color: #38b5f0;
+  color: #fff;
+  font-size: 0.43rem;
+  line-height: 1.39rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+//私有，pending_trip,order_trip
+.pend_bk{
+	background-color: #ffffff;
+	box-shadow: 0rem 0.05rem 0.12rem 0rem 
+    rgba(222, 222, 222, 0.42);
+    margin:0.2rem;
+    padding:0.28rem 0;
+    .pend_top{
+      border-bottom:0.01rem solid #e6e6e6;
+      margin:0 0.3rem;
+      overflow: hidden;
+      padding-bottom: 0.2rem;
+      position:relative;
+     
+      .pend_tup{
+        float: left;
+        img{
+          width:1.93rem;
+          height:1.93rem;
+          border-radius: 100%;
+          box-shadow: 2px 2px 3px #ccc;
+        }
+      }
+      .pend_info{
+        float: left;
+        padding-left:0.48rem;
+        text-align: left;
+        font-size: 0.43rem;
+        margin-top: 0.1rem;
+        .pend_name{
+          margin-bottom:0.16rem;
+        }
+        img{
+          width: 0.35rem;
+          height: 0.35rem;
+          padding-left:0.1rem;
+        }
+
+      }
+      .pend_toptip{
+          margin-top: 0.1rem;
+          text-align:right;
+          .pendsn2{
+            color: #ff8523;
+            font-size: 0.37rem;
+            padding-top:0.1rem;
+
+          }
+      }
+      .pend_star{
+        padding-right:0.1rem;
+        img{
+          width: 0.4rem;
+          height: 0.37rem;
+        }
+        
+      }
+
+    }
+    .pend_toptip img{
+        width: 1.04rem;
+        height: 1.04rem;
+    }
+    .pend_main{
+      border-bottom:0.01rem solid #e6e6e6;
+      margin:0 0.3rem;
+      overflow: hidden;
+      padding-bottom: 0.2rem;
+      color: #333333;
+      padding: 0.3rem;
+      position:relative;
+
+    }
+    .close{
+      width: 0.41rem;
+      height: 0.39rem;
+    }
+    .pendsn4{
+      float: right;
+      color: #333333;
+      font-size: 0.37rem;
+      margin-right:0.3rem;
+      i{
+        font-size: 0.53rem;
+        color: #ff8523;
+       
+
+      }
+    }
+
+    .pendlf{
+      font-size: 0.37rem;
+      line-height: 0.53rem;
+      line-height:2;
+      .pend1{
+        img{
+          width: 0.29rem;
+          height: 0.29rem;
+          padding-right:0.2rem;
+
+        }
+      }
+      .pend2,.pend3,.pend4{
+        position:relative;
+        padding-left:0.5rem;
+        &::after{
+          position:absolute;
+          top:50%;
+          left:0%;
+          content:"";
+          width: 0.22rem;
+          height: 0.22rem;
+          background-color: #38eca2;
+          margin-top:-0.11rem;
+          border-radius: 100%;
+
+        }
+      }
+      .pend3::after{
+        background-color: #ff8523;
+      }
+      .pend4::after{
+        background-color: #cccccc;
+      }
+      .pend5{
+        background:url(../assets/beizhu.png) no-repeat left center;
+        background-size:0.28rem;
+        font-size: 0.37rem;
+        color: #333333;
+        padding-left:0.4rem;
+
+      
+      }
+      
+
+    }
+
+
+    .pendrg{
+      position: absolute;
+      right:0.29rem;
+      top:0.3rem;
+      font-size: 0.48rem;
+      color: #999999;
+      i{
+        color: #ff8523;
+        font-size: 0.77rem;
+      }
+
+    }
+
+    .pendbar{
+      border-bottom:1px solid  #e6e6e6;
+      margin: 0 0.3rem;
+      height:1.4rem;
+      line-height: 1.4rem;
+      font-size:0.37rem;
+      color:#333;
+      .pendsnlf{
+        float: left;
+      }
+      .pendbtn1,.pendbtn2,.pendbtn3,.pendbtn4{
+        width: 2.59rem;
+        height: 0.88rem;
+        background-color: #535466;
+        border-radius: 0.16rem;
+        font-size: 0.37rem;
+        line-height: 0.88rem;
+        color: #ffffff;
+        float:right;
+        text-align:center;
+        margin-top:0.24rem;
+      }
+      .pendbtn2{
+        background-color: #40c2ff;
+        width: 2rem;
+  height: 0.88rem;
+ 
+      }
+      .pendbtn3{
+        background-color: #f16f6f;
+        width: 2rem;
+  height: 0.88rem;
+  margin-right:0.25rem;
+
+      }
+      .pendbtn4{
+       
+  border: solid 0.03rem #38b5f0;
+  color: #38b5f0;
+  background:#fff;
+  
+      }
+    }
+
+    .star_position{
+      display: inline-block;
+
+    }
+    .pend_txt1{
+      font-size: 0.32rem;
+      color: #999999;
+      line-height:1.5;
+    }
+    .pend_star_bk{
+      border: 0.02rem solid #ff8523;
+      color: #ff8523;
+      padding: 0.1rem 0.3rem;
+      font-size: 0.3rem;
+      border-radius: 10%;
+      margin-left: 0.2rem;
+      
+    
+    }
+}
+
+//乘客发布订单与司机发布订单
+.issue_order{
+  width:100%;
+  height:100%;
+  background:#f1f5f8;
+}
+  .index_order{
+    width: 100%;
+   
+    border-bottom:0.01rem solid #e6e6e6;
+   
+    height:1.37rem;
+    line-height:1.37rem;
+    text-align: center;
+    display:flex;
+    // padding:0 0.7rem;
+    .index_empty{
+      flex:1;
+      position:relative;
+      span{
+        font-size:0.37rem;
+        color:#999;
+        line-height: 0.77rem;
+
+      }
+      img{
+        width: 0.45rem;
+        height: 0.45rem;
+        padding-right:0.36rem;
+        vertical-align:middle;
+      }
+      &:first-child::before{
+        position:absolute;
+        width: 0.02rem;
+        height: 0.93rem;
+        background-color: #e6e6e6;
+        content:"";
+        top:0.2rem;
+        right:0.1rem;
+        
+      }
+    }
+
+  }
+  .index_chose{
+    // padding:0 0.3rem;
+    display:flex;
+    // height:1.5rem;
+    padding:0.4rem 0.4rem 0.4rem 0.2rem;
+    // line-height:1.5rem;
+     span{
+      font-size:0.32rem;
+      color:#999;
+      width:1.2rem;
+      display:inline-block;
+     }
+     ul{
+       flex:1;
+       display: flex;
+       li{
+        flex:1;
+        justify-content: center;
+        
+        div{
+          width: 1.59rem;
+        height: 0.77rem;
+        margin:0 auto;
+        text-align:center;
+        border-radius: 0.11rem;
+        border: solid 0.02rem #cccccc;
+        font-size: 0.37rem;
+        line-height:0.77rem;
+        color:#999;
+        &.active{
+          color: #ff8523;
+          border-color:#ff8523;
+        }
+        }
+       }
+     }
+   }
+
+   .info_price{
+    position: fixed;
+    bottom: 1.4rem;
+    left: 0;
+    width: 100%;
+    font-size:0.53rem;
+    height: 1.44rem;
+    background-color: #ffffff;
+    text-align:center;
+    line-height:1.44rem;
+    color: #ff8523;
+    // padding-left: 1rem;
+    span{
+      color:#ccc;
+      font-size:0.37rem;
+      padding-left:0.4rem;
+    }
+   }
+   .info_rule{
+    color: #999999;
+    font-size: 0.27rem;
+    text-align:center;
+    position:fixed;
+    bottom:2.88rem;
+    left:0;
+    width:100%;
+    margin-bottom:0.3rem;
+    img{
+      width: 0.35rem;
+      height: 0.35rem;
+      vertical-align:center;
+    }
+
+   }
+
+.info_btn2{
+  width:100%;
+  display: flex;
+  background:#464651;
+  height:1.4rem;
+  line-height: 1.4rem;
+  position: fixed;;
+  bottom:0;
+  left:0;
+  right: 0;
+  justify-content: space-between;
+  .info_num{
+    color: #ffffff;
+    font-size: 0.43rem;
+    padding-left:0.4rem;
+
+  }
+  .info_go{
+    width: 3.01rem;
+	height: 1.39rem;
+	background-color: #5bd651;
+    color: #fff;
+    text-align:center;
+
+  }
+
+}
+
+
